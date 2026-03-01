@@ -1,125 +1,127 @@
-# Convolutional Neural Networks
-### A Beamer Presentation
+# 🧠 Convolutional Neural Networks
+### *How Machines Learn to See*
 
-> *How Machines Learn to See*
-
----
-
-## Authors
-
-| Name | Student ID |
-|------|-----------|
-| Arjo Kar | 2205031 |
-| Lamisa Zahin | 2205046 |
-| Zannatun Nayeem Ohee | 2205059 |
-
-**Institution:** Bangladesh University of Engineering and Technology  
-**Date:** February 2026
+> A fully hand-crafted **LaTeX Beamer** presentation — every diagram, every animation, every visual built from scratch using pure TikZ. No PowerPoint. No Canva. Just code.
 
 ---
 
-## About This Presentation
+## 📋 Course Information
 
-A visual, story-driven introduction to **Convolutional Neural Networks (CNNs)** built entirely in LaTeX using the Beamer framework and TikZ graphics — no PowerPoint, no external design tools.
-
-### Topics Covered
-
-- The motivation behind CNNs (the X-ray story)
-- How computers see images vs. how humans do
-- Why normal neural networks fail on images
-- CNN building blocks: Conv Layer, ReLU, Pooling, FC Layer
-- Step-by-step convolution walkthrough (Sobel-X kernel)
-- Max pooling step-by-step
-- A full CNN forward pass demo on a handwritten digit
-- Real-world impact and limitations of CNNs
+| | |
+|---|---|
+| **Course** | CSE 200 — Technical Writing and Presentation |
+| **Level & Term** | L2-T2 |
+| **Institution** | Bangladesh University of Engineering and Technology (BUET) |
+| **Date** | February 2026 |
 
 ---
 
-## File Structure
+## 👥 Authors & Contributions
+
+This presentation was split into three parts, each owned and built by one author:
+
+### 🔷 Arjo Kar — `2205031`
+**Part 1: The Story & The Problem**
+- The CNN origin story (the X-ray analogy)
+- Human vision vs. computer vision
+- Why normal neural networks fail on images (3 core problems)
+- How CNN solves all three problems
+- Building blocks overview
+
+### 🔶 Lamisa Zahin — `2205046`
+**Part 2: The Convolution Layer (Deep Dive)**
+- What is convolution? (1D math → 2D CNN)
+- Kernels explained — Blur, Sobel-X, Identity
+- Full 9-step convolution walkthrough
+- The feature map result
+- ReLU activation — definition, graph, applied example
+- Pooling layer — concept, math, 4-step walkthrough
+- Fully connected layer
+- Putting it all together — the full CNN pipeline
+
+### 🟢 Zannatun Nayeem Ohee — `2205059`
+**Part 3: CNN In Action & Real World**
+- Live CNN demo — forward pass on a handwritten digit
+- Input image → Conv filters → ReLU → Merge → Pooling → Flatten → FC → Softmax
+- Real-world impact (Healthcare, Autonomous Vehicles, Agriculture)
+- CNN adoption growth over time (charts)
+- Limitations of CNNs
+
+---
+
+## 📁 File Structure
 
 ```
-cnn-presentation/
+CNN-Presentation/
 │
-├── main.tex                  # Main LaTeX source file
+├── main.tex                        # Full LaTeX source
+├── CNN.pdf            # Compiled presentation (ready to present)
+├── README.md                       # This file
 │
-├── images/
-│   ├── 01_Input_Image/
-│   │   ├── 01_input_clean.png
-│   │   └── 01_input_values.png
-│   ├── 02_Conv1_Filters_and_Outputs/
-│   │   ├── 00_filter_horizontal_values.png
-│   │   ├── 00_filter_vertical_values.png
-│   │   ├── 00_filter_corner_values.png
-│   │   ├── 02_conv_horizontal_out_values.png
-│   │   ├── 02_conv_vertical_out_values.png
-│   │   └── 02_conv_corner_out_values.png
-│   ├── 03_ReLU1/
-│   │   ├── 03_relu_horizontal_values.png
-│   │   ├── 03_relu_vertical_values.png
-│   │   └── 03_relu_corner_values.png
-│   ├── 04_Merged_Features/
-│   │   └── 04_merged_relu_features_values.png
-│   ├── 05_MaxPooling/
-│   │   └── 05_maxpool_values.png
-│   └── 06_Flatten/
-│       └── 06_flatten_values.png
-│
-├── cnn_presentation.pdf      # Compiled output (ready to present)
-└── README.md                 # This file
+└── images/
+    ├── 01_Input_Image/
+    │   ├── 01_input_clean.png
+    │   └── 01_input_values.png
+    ├── 02_Conv1_Filters_and_Outputs/
+    │   ├── 00_filter_horizontal_values.png
+    │   ├── 00_filter_vertical_values.png
+    │   ├── 00_filter_corner_values.png
+    │   ├── 02_conv_horizontal_out_values.png
+    │   ├── 02_conv_vertical_out_values.png
+    │   └── 02_conv_corner_out_values.png
+    ├── 03_ReLU1/
+    │   ├── 03_relu_horizontal_values.png
+    │   ├── 03_relu_vertical_values.png
+    │   └── 03_relu_corner_values.png
+    ├── 04_Merged_Features/
+    │   └── 04_merged_relu_features_values.png
+    ├── 05_MaxPooling/
+    │   └── 05_maxpool_values.png
+    └── 06_Flatten/
+        └── 06_flatten_values.png
 ```
 
 ---
 
-## How to Compile
+## 🛠️ How to Compile
 
-### Requirements
+### Option A — Overleaf *(easiest, no installation)*
+1. Go to [overleaf.com](https://overleaf.com) → **New Project** → **Upload Project**
+2. Zip the entire folder and upload it
+3. Click **Recompile** — done
 
-Make sure you have a full LaTeX distribution installed:
+### Option B — Local LaTeX
 
-- **Windows:** [MiKTeX](https://miktex.org/) or [TeX Live](https://tug.org/texlive/)
-- **macOS:** [MacTeX](https://tug.org/mactex/)
-- **Linux:** `sudo apt install texlive-full`
+**Install a LaTeX distribution:**
+| OS | Distribution |
+|----|-------------|
+| Windows | [MiKTeX](https://miktex.org/) |
+| macOS | [MacTeX](https://tug.org/mactex/) |
+| Linux | `sudo apt install texlive-full` |
 
-### Required LaTeX Packages
-
-| Package | Purpose |
-|---------|---------|
-| `beamer` | Presentation framework |
-| `tikz` | All diagrams and visuals |
-| `pgfplots` | Charts and graphs |
-| `fontawesome5` | Icons |
-| `amsmath` | Math equations |
-| `xcolor` | Custom color palette |
-| `booktabs` | Tables |
-
-### Compile Command
-
+**Compile:**
 ```bash
 pdflatex main.tex
 pdflatex main.tex
 ```
+> Run **twice** — second pass fixes frame numbers and cross-references.
 
-> Run **twice** — the second pass resolves cross-references and frame numbers correctly.
-
-### Using Overleaf (Recommended — no installation needed)
-
-1. Go to [overleaf.com](https://overleaf.com) and create a free account
-2. Click **New Project** → **Upload Project**
-3. Zip the entire folder and upload
-4. Click **Recompile**
+### Required Packages
+`beamer` · `tikz` · `pgfplots` · `fontawesome5` · `amsmath` · `xcolor` · `booktabs`
 
 ---
 
-## Design Notes
+## 🎨 Design
 
-- **Color palette:** custom navy (`#0D3B66`), sky blue (`#2D9CDB`), amber (`#F2A900`)
-- All visuals are drawn in **pure TikZ** — no external diagram tools
-- The presentation uses **Beamer overlays** (`\only<n>`) for step-by-step reveals
-- Aspect ratio: **16:9**
+- **Color palette:** navy `#0D3B66` · sky blue `#2D9CDB` · amber `#F2A900` · ice `#F4F8FC`
+- **Aspect ratio:** 16:9
+- All visuals drawn in **pure TikZ** — no external tools
+- Step-by-step **Beamer overlays** for animated reveals
+- Custom header, footer, and bullet styles throughout
 
 ---
 
-## License
+## 📄 License
 
-This project was created for academic/educational purposes at BUET.  
-Feel free to use or adapt with attribution.
+Created for academic purposes at BUET — CSE 200, L2-T2.  
+Free to use and adapt with attribution.
